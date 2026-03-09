@@ -1,6 +1,6 @@
 palavra = "test"
 tentativas = ""
-print("adivinhe a plavra")
+print(f"adivinhe a plavra, ela tem {len(palavra)} letras")
 while not (tentativas == palavra):
     jogada = str(input("Digite sua jogada: "))
     if jogada.isalpha():
@@ -10,7 +10,8 @@ while not (tentativas == palavra):
                 print("vc ganhou")
                 break
             print("existe essa letra")
-
+        else:
+            print("Errou tente novamente")
         for index in range(len(palavra)):
             if palavra[index] in tentativas:
                 print(palavra[index], end="")
